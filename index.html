@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="counter">0</h1>
+
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        let count = 0;
+
+        function increment() {
+            if (count >= 10) {
+                alert("Maximum limit reached!");
+                return;
+            }
+            count++;
+            document.getElementById("counter").innerText = count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById("counter").innerText = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("counter").innerText = count;
+        }
+    </script>
+
+</body>
+</html>
